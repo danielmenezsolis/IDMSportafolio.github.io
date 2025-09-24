@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel Menez - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+  <style>
+    .fade-transition {
+      transition: background-color 0.6s ease, color 0.6s ease;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-100 fade-transition">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-900 text-white dark:bg-gray-800 fade-transition">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl font-bold">Daniel Menez</h1>
+      <div class="flex items-center space-x-4">
+        <a href="#projects" class="hover:text-blue-400">Projects</a>
+        <a href="#skills" class="hover:text-blue-400">Skills</a>
+        <a href="#contact" class="hover:text-blue-400">Contact</a>
+        <!-- Toggle Button -->
+        <button id="darkToggle" class="px-2 py-1 bg-blue-600 rounded hover:bg-blue-700 transition text-lg">
+          🌙
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="text-center py-16 bg-white shadow dark:bg-gray-800 fade-transition">
+    <h2 class="text-4xl font-extrabold mb-2">Irving Daniel Menez Solis</h2>
+    <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">.NET Developer | API Integrations | Cloud & Databases</p>
+    <a href="DanielMenezResume.pdf" target="_blank" 
+       class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+       Download CV
+    </a>
+  </header>
+
+  <!-- Projects -->
+  <section id="projects" class="py-16 container mx-auto px-4 fade-transition">
+    <h2 class="text-2xl font-bold mb-8">Projects</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      
+      <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 fade-transition transform hover:scale-105 hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">API Integration</h3>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">REST API built with .NET Core to integrate SAP and Salesforce. Improved data sync efficiency by 20%.</p>
+        <a href="#" class="text-blue-600 hover:underline">View Code</a>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 fade-transition transform hover:scale-105 hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">CRM Customization</h3>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">Oracle Sales Cloud customization with C# and JavaScript workflows, supporting LATAM clients.</p>
+        <a href="#" class="text-blue-600 hover:underline">Details</a>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 fade-transition transform hover:scale-105 hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">Banking Dashboard</h3>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">ASP.NET dashboard with SQL reporting, delivering executive-level insights for Banorte.</p>
+        <a href="#" class="text-blue-600 hover:underline">Preview</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-16 bg-white dark:bg-gray-800 fade-transition">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-6">Skills</h2>
+      <ul class="grid md:grid-cols-2 gap-4">
+        <li class="bg-gray-100 dark:bg-gray-700 p-3 rounded fade-transition">C#, .NET Core, ASP.NET, Entity Framework</li>
+        <li class="bg-gray-100 dark:bg-gray-700 p-3 rounded fade-transition">SQL Server, Oracle, MySQL, PL/SQL</li>
+        <li class="bg-gray-100 dark:bg-gray-700 p-3 rounded fade-transition">Azure DevOps, Docker, Git</li>
+        <li class="bg-gray-100 dark:bg-gray-700 p-3 rounded fade-transition">REST & SOAP APIs, API Integrations</li>
+        <li class="bg-gray-100 dark:bg-gray-700 p-3 rounded fade-transition">JavaScript, HTML, CSS, Tailwind</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 text-center fade-transition">
+    <h2 class="text-2xl font-bold mb-4">Contact</h2>
+    <p>Email: <a href="mailto:daniel_menez@hotmail.com" class="text-blue-600 hover:underline">daniel_menez@hotmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/irvingdanielmenezsolis/" target="_blank" class="text-blue-600 hover:underline">linkedin.com/in/irvingdanielmenezsolis</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 dark:bg-gray-950 text-white text-center py-4 fade-transition">
+    <small>&copy; <span id="year"></span> Daniel Menez. All rights reserved.</small>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('darkToggle');
+    const html = document.documentElement;
+    toggle.addEventListener('click', () => {
+      html.classList.add('fade-transition');
+      html.classList.toggle('dark');
+      toggle.textContent = html.classList.contains('dark') ? '☀️' : '🌙';
+    });
+
+    // Año dinámico en footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
