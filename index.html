@@ -1,123 +1,211 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daniel Menez - Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class'
-    }
-  </script>
-  <style>
-    .fade-transition {
-      transition: background-color 0.6s ease, color 0.6s ease;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irving Daniel Menez Solis - CV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
-<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-100 fade-transition">
+<body class="bg-gray-50 text-gray-800 antialiased p-4 sm:p-8">
+    <script>
+        // API setup boilerplate (not used for this static CV)
+        const __app_id = typeof window.__app_id !== 'undefined' ? window.__app_id : 'default-app-id';
+        const __firebase_config = typeof window.__firebase_config !== 'undefined' ? window.__firebase_config : '{}';
+        const __initial_auth_token = typeof window.__initial_auth_token !== 'undefined' ? window.__initial_auth_token : undefined;
+    </script>
+    <main class="max-w-4xl mx-auto bg-white shadow-xl rounded-2xl p-6 md:p-10">
+        <!-- HEADER & CONTACT -->
+        <header class="pb-6 border-b border-gray-100 mb-6">
+            <h1 class="text-4xl font-extrabold text-blue-700 tracking-tight">Irving Daniel Menez Solis</h1>
+            <p class="text-lg text-gray-500 mt-1">Senior .NET Developer & Technical Lead</p>
+            <div class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-600">
+                <a href="https://www.linkedin.com/in/irvingdanielmenezsolis/" target="_blank" class="hover:text-blue-600 transition duration-150">LinkedIn</a>
+                <a href="mailto:daniel_menez@hotmail.com" class="hover:text-blue-600 transition duration-150">daniel_menez@hotmail.com</a>
+				<span class="whitespace-nowrap">7225251549</span>
+				<a href="DanielMenezResume.pdf" target="_blank"  class="hover:text-blue-600 transition duration-150">  Download Resume </a>
+            </div>
+        </header>
 
-  <!-- Navbar -->
-  <nav class="bg-gray-900 text-white dark:bg-gray-800 fade-transition">
-    <div class="container mx-auto flex justify-between items-center p-4">
-      <h1 class="text-xl font-bold">Daniel Menez</h1>
-      <div class="flex items-center space-x-4">
-        <a href="#projects" class="hover:text-blue-400">Projects</a>
-        <a href="#skills" class="hover:text-blue-400">Skills</a>
-        <a href="#contact" class="hover:text-blue-400">Contact</a>
-        <!-- Toggle Button -->
-        <button id="darkToggle" class="px-2 py-1 bg-blue-600 rounded hover:bg-blue-700 transition text-lg">
-          🌙
-        </button>
-      </div>
-    </div>
-  </nav>
+        <!-- PROFESSIONAL PROFILE -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-700 border-b-2 border-blue-500 pb-1 mb-4">Professional Profile</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Senior .NET Developer and Technical Lead with over 10 years of experience designing, developing, and deploying enterprise-level solutions — including 4 years in SaaS environments. Specialized in **C#, .NET Core, RESTful APIs, SQL Server optimization, and integration architectures** across platforms such as SAP, Salesforce, Oracle Sales Cloud, and OIC. Strong experience in **Azure DevOps, CI/CD pipelines, Entity Framework, LINQ**, and Agile methodologies, leading cross-functional teams to deliver secure, scalable, and high-performance systems that improve efficiency and data flow.
+            </p>
+        </section>
+        
+        <!-- TECHNICAL SKILLS -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-700 border-b-2 border-blue-500 pb-1 mb-4">Technical Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
+                <div>
+                    <h3 class="font-semibold text-gray-600">Programming & Frameworks:</h3>
+                    <p>C#, .NET Core, ASP.NET Core, Entity Framework, JavaScript, HTML, CSS, Groovy</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-gray-600">APIs & Integrations:</h3>
+                    <p>REST, SOAP, Middleware, CRM Integrations (Oracle, Salesforce, SAP)</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-gray-600">Cloud & DevOps:</h3>
+                    <p>Azure DevOps, Azure App Service, Docker, Git, CI/CD, Jira, SourceTree, Oracle Cloud, OIC</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-gray-600">Databases:</h3>
+                    <p>SQL Server, Oracle, MySQL, SQLite, PL/SQL</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-gray-600">Frontend:</h3>
+                    <p>JavaScript, HTML, CSS, Bootstrap, Tailwind</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-gray-600">Tools & Platforms:</h3>
+                    <p>Oracle Visual Builder, Oracle BI, OOP, ETL</p>
+                </div>
+            </div>
+        </section>
 
-  <!-- Hero Section -->
-  <header class="text-center py-16 bg-white shadow dark:bg-gray-800 fade-transition">
-    <h2 class="text-4xl font-extrabold mb-2">Irving Daniel Menez Solis</h2>
-    <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">.NET Developer | API Integrations | Cloud & Databases</p>
-    <a href="DanielMenezResume.pdf" target="_blank" 
-       class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
-       Download CV
-    </a>
-  </header>
+        <!-- PROFESSIONAL EXPERIENCE -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-700 border-b-2 border-blue-500 pb-1 mb-4">Experience</h2>
 
-  <!-- Projects -->
-  <section id="projects" class="py-16 container mx-auto px-4 fade-transition">
-    <h2 class="text-2xl font-bold mb-8">Projects</h2>
-    <div class="grid md:grid-cols-3 gap-6">
-      
-      <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 fade-transition transform hover:scale-105 hover:shadow-lg transition">
-      <h3 class="text-xl font-semibold mb-2">Travel Agency Automation</h3>
-      <p class="text-gray-600 dark:text-gray-300 mb-4">
-        Implemented a workflow automation using <strong>n8n</strong> that integrated booking services, 
-        notifications, and payment confirmations for a travel agency. 
-        Reduced manual workload by 40% and improved response times.
-      </p>
-      <a href="https://danielmenezsolis.github.io/viajes.github.io/" class="text-blue-600 hover:underline">Details</a>
-    </div>
+            <!-- Accelalpha -->
+            <div class="mb-6 p-4 bg-gray-50 rounded-lg">
+                <div class="flex justify-between flex-wrap">
+                    <h3 class="text-xl font-semibold text-gray-800">Senior Customer Experience Consultant</h3>
+                    <span class="text-sm font-medium text-blue-600">03/2023 – 08/2025</span>
+                </div>
+                <div class="flex justify-between flex-wrap text-gray-600 text-sm mb-2">
+                    <p>Accelalpha</p>
+                    <p>Mexico City (Remote)</p>
+                </div>
+                <ul class="list-disc list-outside ml-5 text-gray-700 text-sm space-y-1">
+                    <li>Collaborated with global teams (USA, India) to deliver customized CRM and data integration solutions.</li>
+                    <li>Developed C#/.NET Add-ins for Oracle RightNow, extending system capabilities and automating key workflows.</li>
+                    <li>Built API-driven integrations and backend automations using .NET Core and Oracle Integration Cloud (OIC) to synchronize enterprise data across systems.</li>
+                    <li>Created web interfaces using HTML, CSS, JavaScript, and Bootstrap to improve UI/UX and user adoption.</li>
+                    <li>Automated workflows that reduced manual processes by 30% through scripting and backend logic.</li>
+                    <li>Provided continuous technical support, debugging, and maintenance, ensuring high system stability.</li>
+                </ul>
+            </div>
 
-      <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 fade-transition transform hover:scale-105 hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-2">API Integration</h3>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">REST API built with .NET Core to integrate SAP and Salesforce. Improved data sync efficiency by 20%.</p>
-        <a href="#" class="text-blue-600 hover:underline">View Code</a>
-      </div>
+            <!-- MC1 -->
+            <div class="mb-6 p-4 bg-gray-50 rounded-lg">
+                <div class="flex justify-between flex-wrap">
+                    <h3 class="text-xl font-semibold text-gray-800">Technical Lead Consultant</h3>
+                    <span class="text-sm font-medium text-blue-600">04/2020 – 09/2022</span>
+                </div>
+                <div class="flex justify-between flex-wrap text-gray-600 text-sm mb-2">
+                    <p>MC1</p>
+                    <p>Mexico City (Remote)</p>
+                </div>
+                <ul class="list-disc list-outside ml-5 text-gray-700 text-sm space-y-1">
+                    <li>Designed and maintained C# .NET Core APIs for SAP–Middleware–Salesforce integration.</li>
+                    <li>Implemented data layers using LINQ and Entity Framework (ORM) for optimized data handling and query performance.</li>
+                    <li>Integrated RabbitMQ for asynchronous communication, improving scalability and reliability in distributed systems.</li>
+                    <li>Deployed and maintained APIs through Azure App Services, ensuring secure and efficient delivery.</li>
+                    <li>Led a multidisciplinary Agile team, overseeing sprint planning, code reviews, and deployments.</li>
+                    <li>Built and maintained CI/CD pipelines with Azure DevOps.</li>
+                </ul>
+            </div>
+            
+            <!-- Sinergy Solutions -->
+            <div class="mb-6 p-4 bg-gray-50 rounded-lg">
+                <div class="flex justify-between flex-wrap">
+                    <h3 class="text-xl font-semibold text-gray-800">Senior CX Implementation</h3>
+                    <span class="text-sm font-medium text-blue-600">10/2017 – 03/2020</span>
+                </div>
+                <div class="flex justify-between flex-wrap text-gray-600 text-sm mb-2">
+                    <p>Sinergy Solutions</p>
+                    <p>Mexico City</p>
+                </div>
+                <ul class="list-disc list-outside ml-5 text-gray-700 text-sm space-y-1">
+                    <li>Implemented Oracle Sales Cloud CRM solutions, integrating backend systems via C# and REST/SOAP APIs.</li>
+                    <li>Developed C# console applications for data ingestion and automated CSV processing.</li>
+                    <li>Created .NET and JavaScript extensions to enhance CRM functionality.</li>
+                </ul>
+            </div>
 
-      <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 fade-transition transform hover:scale-105 hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-2">CRM Customization</h3>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">Oracle Sales Cloud customization with C# and JavaScript workflows, supporting LATAM clients.</p>
-        <a href="#" class="text-blue-600 hover:underline">Details</a>
-      </div>
+            <!-- Global Hitss -->
+            <div class="p-4 bg-gray-50 rounded-lg">
+                <div class="flex justify-between flex-wrap">
+                    <h3 class="text-xl font-semibold text-gray-800">Service Desk Developer</h3>
+                    <span class="text-sm font-medium text-blue-600">01/2017 – 10/2017</span>
+                </div>
+                <div class="flex justify-between flex-wrap text-gray-600 text-sm mb-2">
+                    <p>Global Hitss</p>
+                    <p>Mexico City</p>
+                </div>
+                <ul class="list-disc list-outside ml-5 text-gray-700 text-sm space-y-1">
+                    <li>Developed and maintained ASP.NET MVC applications for Banorte’s banking systems.</li>
+                    <li>Implemented xUnit tests to validate new features and ensure application stability.</li>
+                    <li>Optimized SQL Server DTSX packages and stored procedures.</li>
+                </ul>
+            </div>
 
-      <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 fade-transition transform hover:scale-105 hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-2">Banking Dashboard</h3>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">ASP.NET dashboard with SQL reporting, delivering executive-level insights for Banorte.</p>
-        <a href="#" class="text-blue-600 hover:underline">Preview</a>
-      </div>
+        </section>
 
-    </div>
-  </section>
+        <!-- FEATURED PROJECTS -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-700 border-b-2 border-blue-500 pb-1 mb-4">Featured Projects</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                
+                <div class="bg-blue-50 p-4 rounded-xl shadow-md border-t-4 border-blue-500">
+                    <h3 class="font-bold text-lg text-gray-800">Travel Management (n8n & Chatbot)</h3>
+                    <p class="text-sm text-gray-600 mt-1">Web Platform for back-office automation.</p>
+                    <p class="text-xs text-gray-500 mt-2">Development of a web interface integrated with **n8n** automation flows, where a **chatbot manages the reservation process**, streamlining the request, approval, and logging of business travel.</p>
+                </div>
+                
+                <div class="bg-blue-50 p-4 rounded-xl shadow-md border-t-4 border-blue-500">
+                    <h3 class="font-bold text-lg text-gray-800">Shared Expense REST API (.NET)</h3>
+                    <p class="text-sm text-gray-600 mt-1">Robust backend for managing shared finances.</p>
+                    <p class="text-xs text-gray-500 mt-2">Creation of a **RESTful API in C# (.NET Core)** to manage shared expense transactions, users, and groups, including balancing logic and secure authentication.</p>
+                </div>
 
-  <!-- Skills -->
-  <section id="skills" class="py-16 bg-white dark:bg-gray-800 fade-transition">
-    <div class="container mx-auto px-4">
-      <h2 class="text-2xl font-bold mb-6">Skills</h2>
-      <ul class="grid md:grid-cols-2 gap-4">
-        <li class="bg-gray-100 dark:bg-gray-700 p-3 rounded fade-transition">C#, .NET Core, ASP.NET, Entity Framework</li>
-        <li class="bg-gray-100 dark:bg-gray-700 p-3 rounded fade-transition">SQL Server, Oracle, MySQL, PL/SQL</li>
-        <li class="bg-gray-100 dark:bg-gray-700 p-3 rounded fade-transition">Azure DevOps, Docker, Git</li>
-        <li class="bg-gray-100 dark:bg-gray-700 p-3 rounded fade-transition">REST & SOAP APIs, API Integrations</li>
-        <li class="bg-gray-100 dark:bg-gray-700 p-3 rounded fade-transition">JavaScript, HTML, CSS, Tailwind</li>
-      </ul>
-    </div>
-  </section>
+                <div class="bg-blue-50 p-4 rounded-xl shadow-md border-t-4 border-blue-500">
+                    <h3 class="font-bold text-lg text-gray-800">Shared Expense Frontend (Angular)</h3>
+                    <p class="text-sm text-gray-600 mt-1">Dynamic and responsive user interface.</p>
+                    <p class="text-xs text-gray-500 mt-2">Implementation of an **Angular** frontend application to consume the shared expenses API, providing a dynamic and responsive user interface for logging and viewing transactions.</p>
+                </div>
+            </div>
+        </section>
 
-  <!-- Contact -->
-  <section id="contact" class="py-16 text-center fade-transition">
-    <h2 class="text-2xl font-bold mb-4">Contact</h2>
-    <p>Email: <a href="mailto:daniel_menez@hotmail.com" class="text-blue-600 hover:underline">daniel_menez@hotmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/irvingdanielmenezsolis/" target="_blank" class="text-blue-600 hover:underline">linkedin.com/in/irvingdanielmenezsolis</a></p>
-  </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 dark:bg-gray-950 text-white text-center py-4 fade-transition">
-    <small>&copy; <span id="year"></span> Daniel Menez. All rights reserved.</small>
-  </footer>
-
-  <script>
-    const toggle = document.getElementById('darkToggle');
-    const html = document.documentElement;
-    toggle.addEventListener('click', () => {
-      html.classList.add('fade-transition');
-      html.classList.toggle('dark');
-      toggle.textContent = html.classList.contains('dark') ? '☀️' : '🌙';
-    });
-
-    // Año dinámico en footer
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- EDUCATION -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-700 border-b-2 border-blue-500 pb-1 mb-4">Education</h2>
+                <div class="p-4 bg-gray-50 rounded-lg">
+                    <h3 class="font-semibold text-lg text-gray-800">Bachelor's Degree Information Technology</h3>
+                    <p class="text-sm text-gray-600">Universidad Politécnica del Valle de Toluca</p>
+                    <p class="text-xs text-gray-500 mt-1">2009 - 2013</p>
+                </div>
+            </section>
+            
+            <!-- CERTIFICATIONS -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-700 border-b-2 border-blue-500 pb-1 mb-4">Certifications</h2>
+                <ul class="space-y-3">
+                    <li class="p-3 bg-gray-50 rounded-lg">
+                        <p class="font-semibold text-gray-800">Oracle APEX Cloud Certified Developer Professional</p>
+                        <p class="text-sm text-gray-600">Oracle | 15/09/2025</p>
+                    </li>
+                    <li class="p-3 bg-gray-50 rounded-lg">
+                        <p class="font-semibold text-gray-800">Salesforce Certified Platform Foundations</p>
+                        <p class="text-sm text-gray-600">Salesforce | 20/12/2023</p>
+                    </li>
+                    <li class="p-3 bg-gray-50 rounded-lg">
+                        <p class="font-semibold text-gray-800">Microsoft Certified: Azure Fundamentals</p>
+                        <p class="text-sm text-gray-600">Microsoft | 23/11/2022</p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        
+    </main>
 </body>
 </html>
