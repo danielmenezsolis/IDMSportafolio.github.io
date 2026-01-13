@@ -1,228 +1,520 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Irving Daniel Menez Solis - CV</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-        body { font-family: 'Inter', sans-serif; }
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+      }
     </style>
-</head>
-<body class="bg-gray-50 text-gray-800 antialiased p-4 sm:p-8">
+  </head>
+  <body class="bg-gray-50 text-gray-800 antialiased p-4 sm:p-8">
     <script>
-        // API setup boilerplate (not used for this static CV)
-        const __app_id = typeof window.__app_id !== 'undefined' ? window.__app_id : 'default-app-id';
-        const __firebase_config = typeof window.__firebase_config !== 'undefined' ? window.__firebase_config : '{}';
-        const __initial_auth_token = typeof window.__initial_auth_token !== 'undefined' ? window.__initial_auth_token : undefined;
+      // API setup boilerplate (not used for this static CV)
+      const __app_id =
+        typeof window.__app_id !== "undefined"
+          ? window.__app_id
+          : "default-app-id";
+      const __firebase_config =
+        typeof window.__firebase_config !== "undefined"
+          ? window.__firebase_config
+          : "{}";
+      const __initial_auth_token =
+        typeof window.__initial_auth_token !== "undefined"
+          ? window.__initial_auth_token
+          : undefined;
     </script>
     <main class="max-w-4xl mx-auto bg-white shadow-xl rounded-2xl p-6 md:p-10">
-        <!-- HEADER & CONTACT -->
-        <header class="pb-6 border-b border-gray-100 mb-6">
-            <h1 class="text-4xl font-extrabold text-blue-700 tracking-tight">Irving Daniel Menez Solis</h1>
-            <p class="text-lg text-gray-500 mt-1">Senior .NET Developer & Technical Lead</p>
-            <div class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-600">
-                <a href="https://www.linkedin.com/in/irvingdanielmenezsolis/" target="_blank" class="hover:text-blue-600 transition duration-150">LinkedIn</a>
-                <a href="mailto:daniel_menez@hotmail.com" class="hover:text-blue-600 transition duration-150">daniel_menez@hotmail.com</a>
-				<span class="whitespace-nowrap">7225251549</span>
-				<a href="DanielMenezResume.pdf" target="_blank"  class="hover:text-blue-600 transition duration-150">  Download Resume </a>
-            </div>
-        </header>
-
-        <!-- PROFESSIONAL PROFILE -->
-        <section class="mb-8">
-            <h2 class="text-2xl font-bold text-gray-700 border-b-2 border-blue-500 pb-1 mb-4">Professional Profile</h2>
-            <p class="text-gray-700 leading-relaxed">
-                Senior .NET Developer and Technical Lead with over 10 years of experience designing, developing, and deploying enterprise-level solutions — including 4 years in SaaS environments. Specialized in C#, .NET Core, RESTful APIs, SQL Server optimization, and integration architectures across platforms such as SAP, Salesforce, Oracle Sales Cloud, and OIC. Strong experience in Azure DevOps, CI/CD pipelines, Entity Framework, LINQ, and Agile methodologies, leading cross-functional teams to deliver secure, scalable, and high-performance systems that improve efficiency and data flow.
-            </p>
-        </section>
-        
-        <!-- TECHNICAL SKILLS -->
-        <section class="mb-8">
-            <h2 class="text-2xl font-bold text-gray-700 border-b-2 border-blue-500 pb-1 mb-4">Technical Skills</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
-                <div>
-                    <h3 class="font-semibold text-gray-600">Programming & Frameworks:</h3>
-                    <p>C#, .NET Core, ASP.NET Core, Entity Framework, JavaScript, HTML, CSS, Groovy</p>
-                </div>
-                <div>
-                    <h3 class="font-semibold text-gray-600">APIs & Integrations:</h3>
-                    <p>REST, SOAP, Middleware, CRM Integrations (Oracle, Salesforce, SAP)</p>
-                </div>
-                <div>
-                    <h3 class="font-semibold text-gray-600">Cloud & DevOps:</h3>
-                    <p>Azure DevOps, Azure App Service, Docker, Git, CI/CD, Jira, SourceTree, Oracle Cloud, OIC</p>
-                </div>
-                <div>
-                    <h3 class="font-semibold text-gray-600">Databases:</h3>
-                    <p>SQL Server, Oracle, MySQL, SQLite, PL/SQL</p>
-                </div>
-                <div>
-                    <h3 class="font-semibold text-gray-600">Frontend:</h3>
-                    <p>JavaScript, HTML, CSS, Bootstrap, Tailwind, Angular</p>
-                </div>
-                <div>
-                    <h3 class="font-semibold text-gray-600">Tools & Platforms:</h3>
-                    <p>Oracle Visual Builder, Oracle BI, OOP, ETL</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- PROFESSIONAL EXPERIENCE -->
-        <section class="mb-8">
-            <h2 class="text-2xl font-bold text-gray-700 border-b-2 border-blue-500 pb-1 mb-4">Experience</h2>
-
-            <!-- Accelalpha -->
-            <div class="mb-6 p-4 bg-gray-50 rounded-lg">
-                <div class="flex justify-between flex-wrap">
-                    <h3 class="text-xl font-semibold text-gray-800">Senior Software Developer – CX</h3>
-                    <span class="text-sm font-medium text-blue-600">03/2023 – 08/2025</span>
-                </div>
-                <div class="flex justify-between flex-wrap text-gray-600 text-sm mb-2">
-                    <p>Accelalpha</p>
-                    <p>Mexico City (Remote)</p>
-                </div>
-                <ul class="list-disc list-outside ml-5 text-gray-700 text-sm space-y-1">
-                    <li>Collaborated with global teams (USA, India) to deliver customized CRM and data integration solutions.</li>
-                    <li>Developed C#/.NET Add-ins for Oracle RightNow, extending system capabilities and automating key workflows.</li>
-                    <li>Built API-driven integrations and backend automations using .NET Core and Oracle Integration Cloud (OIC) to synchronize enterprise data across systems.</li>
-                    <li>Created web interfaces using PHP, HTML, CSS, JavaScript, and Bootstrap to improve UI/UX and user adoption.</li>
-                    <li>Automated workflows that reduced manual processes by 30% through scripting and backend logic.</li>
-                    <li>Provided continuous technical support, debugging, and maintenance, ensuring high system stability.</li>
-                </ul>
-            </div>
-
-            <!-- MC1 -->
-            <div class="mb-6 p-4 bg-gray-50 rounded-lg">
-                <div class="flex justify-between flex-wrap">
-                    <h3 class="text-xl font-semibold text-gray-800">Senior Software Developer Team Lead</h3>
-                    <span class="text-sm font-medium text-blue-600">04/2020 – 09/2022</span>
-                </div>
-                <div class="flex justify-between flex-wrap text-gray-600 text-sm mb-2">
-                    <p>MC1</p>
-                    <p>Mexico City (Remote)</p>
-                </div>
-                <ul class="list-disc list-outside ml-5 text-gray-700 text-sm space-y-1">
-                    <li>Designed and maintained C# .NET Core APIs for SAP–Middleware–Salesforce integration.</li>
-                    <li>Implemented data layers using LINQ and Entity Framework (ORM) for optimized data handling and query performance.</li>
-                    <li>Integrated RabbitMQ for asynchronous communication, improving scalability and reliability in distributed systems.</li>
-                    <li>Deployed and maintained APIs through Azure App Services, ensuring secure and efficient delivery.</li>
-					<li>Enhanced ASP.NET modules for large-scale ETL processes and client data uploads.</li>
-					<li>Delivered advanced SQL and SQLite queries for analytics, reporting, and data transformations.</li>
-                    <li>Led a multidisciplinary Agile team, overseeing sprint planning, code reviews, and deployments.</li>
-                    <li>Built and maintained CI/CD pipelines with Azure DevOps.</li>
-                </ul>
-            </div>
-            
-            <!-- Sinergy Solutions -->
-            <div class="mb-6 p-4 bg-gray-50 rounded-lg">
-                <div class="flex justify-between flex-wrap">
-                    <h3 class="text-xl font-semibold text-gray-800">Senior CX Implementation</h3>
-                    <span class="text-sm font-medium text-blue-600">10/2017 – 03/2020</span>
-                </div>
-                <div class="flex justify-between flex-wrap text-gray-600 text-sm mb-2">
-                    <p>Sinergy Solutions</p>
-                    <p>Mexico City</p>
-                </div>
-                <ul class="list-disc list-outside ml-5 text-gray-700 text-sm space-y-1">
-                    <li>Implemented Oracle Sales Cloud CRM solutions, integrating backend systems via C# and REST/SOAP APIs.</li>
-                    <li>Developed C# console applications for data ingestion and automated CSV processing.</li>
-                    <li>Created .NET and JavaScript extensions to enhance CRM functionality.</li>
-					<li>Designed complex PL/SQL queries and Oracle BI dashboards for business insights.</li>
-					<li>Delivered technical workshops and training sessions for client implementation teams.</li>
-                </ul>
-            </div>
-
-            <!-- Global Hitss -->
-            <div class="p-4 bg-gray-50 rounded-lg">
-                <div class="flex justify-between flex-wrap">
-                    <h3 class="text-xl font-semibold text-gray-800">Service Desk Developer</h3>
-                    <span class="text-sm font-medium text-blue-600">01/2017 – 10/2017</span>
-                </div>
-                <div class="flex justify-between flex-wrap text-gray-600 text-sm mb-2">
-                    <p>Global Hitss</p>
-                    <p>Mexico City</p>
-                </div>
-                <ul class="list-disc list-outside ml-5 text-gray-700 text-sm space-y-1">
-                    <li>Developed and maintained ASP.NET MVC applications for Banorte’s banking systems, focusing on modular, maintainable code.</li>
-                    <li>Implemented xUnit tests to validate new features and ensure application stability.</li>
-                    <li>Optimized SQL Server DTSX packages and stored procedures.</li>
-					<li>Collaborated with IT and QA teams to enhance reliability and compliance during production releases.</li>
-					<li>Delivered internal dashboards and reports for operational and management visibility.</li>
-                </ul>
-            </div>
-
-        </section>
-
-        <!-- FEATURED PROJECTS -->
-        <section class="mb-8">
-            <h2 class="text-2xl font-bold text-gray-700 border-b-2 border-blue-500 pb-1 mb-4">Featured Projects</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                
-                <div class="bg-blue-50 p-4 rounded-xl shadow-md border-t-4 border-blue-500">
-                    <h3 class="font-bold text-lg text-gray-800">Travel Management (n8n & Chatbot)</h3>
-                    <p class="text-sm text-gray-600 mt-1">Web Platform for back-office automation.</p>
-                    <p class="text-xs text-gray-500 mt-2">Development of a web interface integrated with n8n automation flows, where a chatbot manages the reservation process, streamlining the request, approval, and logging of business travel.</p>
-              		<div class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-xs text-gray-600">
-						<a href="https://danielmenezsolis.github.io/viajes.github.io/" target="_blank" class="hover:text-blue-600 transition duration-150 text-xs"> Link to Page | Use chatbot </a>	
-					</div>
-				</div>
-                
-                <div class="bg-blue-50 p-4 rounded-xl shadow-md border-t-4 border-blue-500">
-                    <h3 class="font-bold text-lg text-gray-800">Shared Expense REST API (.NET)</h3>
-                    <p class="text-sm text-gray-600 mt-1">Robust backend for managing shared finances.</p>
-                    <p class="text-xs text-gray-500 mt-2">Creation of a RESTful API in C# (.NET Core) to manage shared expense transactions, users, and groups, including balancing logic and secure authentication.</p>
-                	<div class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-xs text-gray-600">
-						<a href="https://github.com/danielmenezsolis/fairly-api" target="_blank" class="hover:text-blue-600 transition duration-150 text-xs">Link to GitHub</a>	
-					</div>
-				</div>
-
-                <div class="bg-blue-50 p-4 rounded-xl shadow-md border-t-4 border-blue-500">
-                    <h3 class="font-bold text-lg text-gray-800">Shared Expense Frontend (Angular)</h3>
-                    <p class="text-sm text-gray-600 mt-1">Dynamic and responsive user interface.</p>
-                    <p class="text-xs text-gray-500 mt-2">Implementation of an Angular frontend application to consume the shared expenses API, providing a dynamic and responsive user interface for logging and viewing transactions.</p>
-                	<div class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-xs text-gray-600">
-						<a href="https://github.com/danielmenezsolis/fairly-angular" target="_blank" class="hover:text-blue-600 transition duration-150 text-xs">Link to GitHub</a>	
-						<a href="https://fairly-angular.vercel.app/login" target="_blank" class="hover:text-blue-600 transition duration-150 text-xs">Live Demo</a>	
-					</div>
-				
-				</div>
-            </div>
-        </section>
-
-
-        <div class="grid md:grid-cols-2 gap-8">
-            <!-- EDUCATION -->
-            <section>
-                <h2 class="text-2xl font-bold text-gray-700 border-b-2 border-blue-500 pb-1 mb-4">Education</h2>
-                <div class="p-4 bg-gray-50 rounded-lg">
-                    <h3 class="font-semibold text-lg text-gray-800">Bachelor's Degree Information Technology</h3>
-                    <p class="text-sm text-gray-600">Universidad Politécnica del Valle de Toluca</p>
-                    <p class="text-xs text-gray-500 mt-1">2009 - 2013</p>
-                </div>
-            </section>
-            
-            <!-- CERTIFICATIONS -->
-            <section>
-                <h2 class="text-2xl font-bold text-gray-700 border-b-2 border-blue-500 pb-1 mb-4">Certifications</h2>
-                <ul class="space-y-3">
-                    <li class="p-3 bg-gray-50 rounded-lg">
-                        <p class="font-semibold text-gray-800">Oracle APEX Cloud Certified Developer Professional</p>
-                        <p class="text-sm text-gray-600">Oracle | 15/09/2025</p>
-                    </li>
-                    <li class="p-3 bg-gray-50 rounded-lg">
-                        <p class="font-semibold text-gray-800">Salesforce Certified Platform Foundations</p>
-                        <p class="text-sm text-gray-600">Salesforce | 20/12/2023</p>
-                    </li>
-                    <li class="p-3 bg-gray-50 rounded-lg">
-                        <p class="font-semibold text-gray-800">Microsoft Certified: Azure Fundamentals</p>
-                        <p class="text-sm text-gray-600">Microsoft | 23/11/2022</p>
-                    </li>
-                </ul>
-            </section>
+      <!-- HEADER & CONTACT -->
+      <header class="pb-6 border-b border-gray-100 mb-6">
+        <h1 class="text-4xl font-extrabold text-blue-700 tracking-tight">
+          Irving Daniel Menez Solis
+        </h1>
+        <p class="text-lg text-gray-500 mt-1">
+          Senior .NET Developer & Technical Lead
+        </p>
+        <div class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-600">
+          <a
+            href="https://www.linkedin.com/in/irvingdanielmenezsolis/"
+            target="_blank"
+            class="hover:text-blue-600 transition duration-150"
+            >LinkedIn</a
+          >
+          <a
+            href="mailto:daniel_menez@hotmail.com"
+            class="hover:text-blue-600 transition duration-150"
+            >daniel_menez@hotmail.com</a
+          >
+          <span class="whitespace-nowrap">7225251549</span>
+          <a
+            href="DanielMenezResume.pdf"
+            target="_blank"
+            class="hover:text-blue-600 transition duration-150"
+          >
+            Download Resume
+          </a>
         </div>
-        
+      </header>
+
+      <!-- PROFESSIONAL PROFILE -->
+      <section class="mb-8">
+        <h2
+          class="text-2xl font-bold text-gray-700 border-b-2 border-blue-500 pb-1 mb-4"
+        >
+          Professional Profile
+        </h2>
+        <p class="text-gray-700 leading-relaxed">
+          Senior <strong>.NET Developer</strong> and
+          <strong>Technical Lead</strong> with 10+ years of experience
+          designing, developing, and deploying enterprise and SaaS applications,
+          specializing in <strong>C#</strong>, <strong>.NET</strong>,
+          <strong>.NET Core</strong>, <strong>ASP.NET Core</strong>,
+          <strong>RESTful APIs</strong>,
+          <strong>SQL Server optimization</strong>, and enterprise integrations
+          with <strong>SAP</strong>, <strong>Salesforce</strong>,
+          <strong>Oracle Sales Cloud</strong>, and
+          <strong>Oracle Integration Cloud (OIC)</strong>, with strong hands-on
+          experience in <strong>Azure DevOps</strong>,
+          <strong>CI/CD pipelines</strong>, <strong>Entity Framework</strong>,
+          <strong>LINQ</strong>, and <strong>Agile methodologies</strong>,
+          leading cross-functional teams to deliver secure, scalable, and
+          high-performance systems.
+        </p>
+      </section>
+
+      <!-- TECHNICAL SKILLS -->
+      <section class="mb-8">
+        <h2
+          class="text-2xl font-bold text-gray-700 border-b-2 border-blue-500 pb-1 mb-4"
+        >
+          Technical Skills
+        </h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-sm"
+        >
+          <div>
+            <h3 class="font-semibold text-gray-600">
+              Programming & Frameworks:
+            </h3>
+            <p>
+              C#, .NET Core, ASP.NET Core, Entity Framework, JavaScript, HTML,
+              CSS, Groovy
+            </p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-600">APIs & Integrations:</h3>
+            <p>
+              REST, SOAP, Middleware, CRM Integrations (Oracle, Salesforce, SAP)
+            </p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-600">Cloud & DevOps:</h3>
+            <p>
+              Azure DevOps, Azure App Service, Docker, Git, CI/CD, Jira,
+              SourceTree, Oracle Cloud, OIC
+            </p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-600">Databases:</h3>
+            <p>SQL Server, Oracle, MySQL, SQLite, PL/SQL</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-600">Frontend:</h3>
+            <p>JavaScript, HTML, CSS, Bootstrap, Tailwind, Angular</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-600">Tools & Platforms:</h3>
+            <p>Oracle Visual Builder, Oracle BI, OOP, ETL</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROFESSIONAL EXPERIENCE -->
+      <section class="mb-8">
+        <h2
+          class="text-2xl font-bold text-gray-700 border-b-2 border-blue-500 pb-1 mb-4"
+        >
+          Experience
+        </h2>
+
+        <!-- Accelalpha -->
+        <div class="mb-6 p-4 bg-gray-50 rounded-lg">
+          <div class="flex justify-between flex-wrap">
+            <h3 class="text-xl font-semibold text-gray-800">
+              Senior Software Developer – CX
+            </h3>
+            <span class="text-sm font-medium text-blue-600"
+              >03/2023 – 08/2025</span
+            >
+          </div>
+          <div
+            class="flex justify-between flex-wrap text-gray-600 text-sm mb-2"
+          >
+            <p>Accelalpha</p>
+            <p>Mexico City (Remote)</p>
+          </div>
+          <ul
+            class="list-disc list-outside ml-5 text-gray-700 text-sm space-y-1"
+          >
+            <ul>
+              <li>
+                Joined an ongoing project previously developed by another
+                consultancy and participated in its
+                <strong>re-implementation and stabilization.</strong>
+              </li>
+              <li>
+                Developed and maintained real-time integrations between Oracle
+                CX, internal APIs, and external payment services.
+              </li>
+              <li>
+                Centralized
+                <strong
+                  >products, subscriptions, orders, and service tickets</strong
+                >
+                within the CRM, significantly reducing customer service response
+                times.
+              </li>
+              <li>
+                Implemented secure handling of payment data using
+                <strong>token-based</strong>
+                processing, exposing only masked card information (last 4
+                digits).
+              </li>
+              <li>
+                Worked extensively with
+                <strong>Oracle Integration Cloud (OIC)</strong> as the only
+                available integration layer for sensitive financial data.
+              </li>
+              <li>
+                Debugged performance issues across OIC, PHP middleware, and .NET
+                services to ensure reliable API responses.
+              </li>
+              <li>
+                <strong>Led a frontend reengineering</strong> using Vanilla
+                JavaScript, improving validations, user flows, and overall
+                usability.
+              </li>
+              <li>
+                Implemented backend and frontend data validations to ensure
+                consistency in subscription and billing workflows.
+              </li>
+              <li>
+                Supported production systems, handled critical incidents, and
+                ensured system stability post go-live.
+              </li>
+            </ul>
+          </ul>
+        </div>
+
+        <!-- MC1 -->
+        <div class="mb-6 p-4 bg-gray-50 rounded-lg">
+          <div class="flex justify-between flex-wrap">
+            <h3 class="text-xl font-semibold text-gray-800">
+              Senior Software Developer Team Lead
+            </h3>
+            <span class="text-sm font-medium text-blue-600"
+              >04/2020 – 09/2022</span
+            >
+          </div>
+          <div
+            class="flex justify-between flex-wrap text-gray-600 text-sm mb-2"
+          >
+            <p>MC1</p>
+            <p>Mexico City (Remote)</p>
+          </div>
+          <ul
+            class="list-disc list-outside ml-5 text-gray-700 text-sm space-y-1"
+          >
+            <li>
+              Acted as <strong>Technical Lead</strong> for the Chile
+              implementation while collaborating with teams in Mexico.
+            </li>
+            <li>
+              <strong>Led a cross-functional team of 5 developers</strong> (2
+              .NET, 2 Android, 1 DB-focused) alongside a Business Analyst.
+            </li>
+            <li>
+              Worked directly with client stakeholders on planning, estimation,
+              and sprint prioritization.
+            </li>
+            <li>
+              Maintained and evolved backend APIs using
+              <strong>.NET Core 7 </strong>, supporting mobile and enterprise
+              sales workflows.
+            </li>
+            <li>
+              Managed data persistence across
+              <strong>SQLite, SQL Server, and MongoDB</strong>, depending on
+              operational needs.
+            </li>
+            <li>
+              Integrated <strong>RabbitMQ</strong> for asynchronous processing
+              and data synchronization (architecture defined by solution
+              architect).
+            </li>
+            <li>
+              Participated in technical decision-making for client-facing and
+              backend components.
+            </li>
+            <li>
+              Supported deployments from
+              <strong> DEV &rarr; QA &rarr; PROD</strong>, following Agile
+              delivery and formal go-live processes.
+            </li>
+            <li>
+              Ensured system reliability for mission-critical sales operations
+              (route-to-market).
+            </li>
+          </ul>
+        </div>
+
+        <!-- Sinergy Solutions -->
+        <div class="mb-6 p-4 bg-gray-50 rounded-lg">
+          <div class="flex justify-between flex-wrap">
+            <h3 class="text-xl font-semibold text-gray-800">
+              Senior CX Implementation
+            </h3>
+            <span class="text-sm font-medium text-blue-600"
+              >10/2017 – 03/2020</span
+            >
+          </div>
+          <div
+            class="flex justify-between flex-wrap text-gray-600 text-sm mb-2"
+          >
+            <p>Sinergy Solutions</p>
+            <p>Mexico City</p>
+          </div>
+          <ul
+            class="list-disc list-outside ml-5 text-gray-700 text-sm space-y-1"
+          >
+            <li>
+              Delivered
+              <strong>end-to-end Oracle Sales Cloud implementations</strong>,
+              covering both technical and functional aspects.
+            </li>
+            <li>
+              Designed and developed
+              <strong
+                >batch APIs to manage daily delivery routes and visit planning
+              </strong>
+              for last-mile delivery solutions.
+            </li>
+            <li>
+              Implemented full <strong>sales funnel workflows</strong> (leads,
+              opportunities, customers) across hierarchical levels (regional
+              managers to executives).
+            </li>
+            <li>
+              Collaborated directly with clients to gather requirements, track
+              progress, and deliver post-implementation support.
+            </li>
+            <li>
+              Standardized complex customer sales cycles to fit into a
+              <strong>multi-tenant SaaS model</strong>.
+            </li>
+            <li>
+              Provided post-go-live support and continuous improvement for
+              production environments.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Global Hitss -->
+        <div class="p-4 bg-gray-50 rounded-lg">
+          <div class="flex justify-between flex-wrap">
+            <h3 class="text-xl font-semibold text-gray-800">
+              Service Desk Developer
+            </h3>
+            <span class="text-sm font-medium text-blue-600"
+              >01/2017 – 10/2017</span
+            >
+          </div>
+          <div
+            class="flex justify-between flex-wrap text-gray-600 text-sm mb-2"
+          >
+            <p>Global Hitss</p>
+            <p>Mexico City</p>
+          </div>
+          <ul
+            class="list-disc list-outside ml-5 text-gray-700 text-sm space-y-1"
+          >
+            <li>
+              Provided <strong>Level 3 support</strong> for production banking systems handling
+              high-volume financial transactions.
+            </li>
+            <li>
+              Developed and maintained complex
+              <strong>SQL Server queries and
+              stored procedures</strong> processing 50–60 million
+              records.
+            </li>
+            <li>
+              Implemented and supported end-of-day banking closure processes.
+            </li>
+            <li>
+              Coordinated with multiple infrastructure, DB, and operations teams
+              following <strong>strict change management procedures.</strong>
+            </li>
+            <li>
+              Generated operational and executive reports on incident trends and
+              resolution metrics.
+            </li>
+            <li>
+              Supported scheduled batch processes critical to monthly banking
+              operations.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- FEATURED PROJECTS -->
+      <section class="mb-8">
+        <h2
+          class="text-2xl font-bold text-gray-700 border-b-2 border-blue-500 pb-1 mb-4"
+        >
+          Featured Projects
+        </h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div
+            class="bg-blue-50 p-4 rounded-xl shadow-md border-t-4 border-blue-500"
+          >
+            <h3 class="font-bold text-lg text-gray-800">
+              Travel Management (n8n & Chatbot)
+            </h3>
+            <p class="text-sm text-gray-600 mt-1">
+              Web Platform for back-office automation.
+            </p>
+            <p class="text-xs text-gray-500 mt-2">
+              Development of a web interface integrated with n8n automation
+              flows, where a chatbot manages the reservation process,
+              streamlining the request, approval, and logging of business
+              travel.
+            </p>
+            <div
+              class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-xs text-gray-600"
+            >
+              <a
+                href="https://danielmenezsolis.github.io/viajes.github.io/"
+                target="_blank"
+                class="hover:text-blue-600 transition duration-150 text-xs"
+              >
+                Link to Page | Use chatbot
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="bg-blue-50 p-4 rounded-xl shadow-md border-t-4 border-blue-500"
+          >
+            <h3 class="font-bold text-lg text-gray-800">
+              Shared Expense REST API (.NET)
+            </h3>
+            <p class="text-sm text-gray-600 mt-1">
+              Robust backend for managing shared finances.
+            </p>
+            <p class="text-xs text-gray-500 mt-2">
+              Creation of a RESTful API in C# (.NET Core) to manage shared
+              expense transactions, users, and groups, including balancing logic
+              and secure authentication.
+            </p>
+            <div
+              class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-xs text-gray-600"
+            >
+              <a
+                href="https://github.com/danielmenezsolis/fairly-api"
+                target="_blank"
+                class="hover:text-blue-600 transition duration-150 text-xs"
+                >Link to GitHub</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="bg-blue-50 p-4 rounded-xl shadow-md border-t-4 border-blue-500"
+          >
+            <h3 class="font-bold text-lg text-gray-800">
+              Shared Expense Frontend (Angular)
+            </h3>
+            <p class="text-sm text-gray-600 mt-1">
+              Dynamic and responsive user interface.
+            </p>
+            <p class="text-xs text-gray-500 mt-2">
+              Implementation of an Angular frontend application to consume the
+              shared expenses API, providing a dynamic and responsive user
+              interface for logging and viewing transactions.
+            </p>
+            <div
+              class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-xs text-gray-600"
+            >
+              <a
+                href="https://github.com/danielmenezsolis/fairly-angular"
+                target="_blank"
+                class="hover:text-blue-600 transition duration-150 text-xs"
+                >Link to GitHub</a
+              >
+              <a
+                href="https://fairly-angular.vercel.app/login"
+                target="_blank"
+                class="hover:text-blue-600 transition duration-150 text-xs"
+                >Live Demo</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- EDUCATION -->
+        <section>
+          <h2
+            class="text-2xl font-bold text-gray-700 border-b-2 border-blue-500 pb-1 mb-4"
+          >
+            Education
+          </h2>
+          <div class="p-4 bg-gray-50 rounded-lg">
+            <h3 class="font-semibold text-lg text-gray-800">
+              Bachelor's Degree Information Technology
+            </h3>
+            <p class="text-sm text-gray-600">
+              Universidad Politécnica del Valle de Toluca
+            </p>
+            <p class="text-xs text-gray-500 mt-1">2009 - 2013</p>
+          </div>
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section>
+          <h2
+            class="text-2xl font-bold text-gray-700 border-b-2 border-blue-500 pb-1 mb-4"
+          >
+            Certifications
+          </h2>
+          <ul class="space-y-3">
+            <li class="p-3 bg-gray-50 rounded-lg">
+              <p class="font-semibold text-gray-800">
+                Oracle APEX Cloud Certified Developer Professional
+              </p>
+              <p class="text-sm text-gray-600">Oracle | 15/09/2025</p>
+            </li>
+            <li class="p-3 bg-gray-50 rounded-lg">
+              <p class="font-semibold text-gray-800">
+                Salesforce Certified Platform Foundations
+              </p>
+              <p class="text-sm text-gray-600">Salesforce | 20/12/2023</p>
+            </li>
+            <li class="p-3 bg-gray-50 rounded-lg">
+              <p class="font-semibold text-gray-800">
+                Microsoft Certified: Azure Fundamentals
+              </p>
+              <p class="text-sm text-gray-600">Microsoft | 23/11/2022</p>
+            </li>
+          </ul>
+        </section>
+      </div>
     </main>
-</body>
+  </body>
 </html>
